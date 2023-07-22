@@ -31,6 +31,7 @@ mtvec_handler:
   bne t0, t1, fail
  
   csrr t0, mscratch
+  
   csrw mepc, t0
   mret
  
