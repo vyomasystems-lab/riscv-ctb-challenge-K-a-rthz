@@ -12,7 +12,7 @@ RVTEST_CODE_BEGIN
 
   la t0, test_cases
   addi t6, t0, 32
-    li t5, 3
+  li t5, 3
 
 loop:
 	lw t1, (t0)

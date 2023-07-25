@@ -10,30 +10,41 @@ RVTEST_CODE_BEGIN
   .option norvc
 
   li TESTNUM, 2
-illegal_instruction:
-  la t0, mtvec_handler
-  csrw mtvec, t0    
-  .word 0     
-  
-  j fail
-  ret
-
-  TEST_PASSFAIL
 
   .align 8
   .global mtvec_handler
-mtvec_handler:
-  csrr t0, mepc
-  csrw mscratch, t0
 
-  li t1, CAUSE_ILLEGAL_INSTRUCTION
-  csrr t0, mcause
-  bne t0, t1, fail
+  mtvec_handler:
+
  
-  csrr t0, mscratch
+  csrr t0, mcause
+  li t1, CAUSE_ILLEGAL_INSTRUCTION
+ 
+  bne t0, t1, fail
+ csrr t2, mepc
+  addi t2, t2, 4
+  csrw mepc, t2
   
-  csrw mepc, t0
-  mret
+    mret
+
+
+
+illegal_instruction:  
+ la t0, mtvec_handler
+ csrw mtvec, t0
+ 
+  .word 0
+
+      
+  j test_end
+  
+test_end:
+ 
+
+  TEST_PASSFAIL
+
+  
+
  
 
 
