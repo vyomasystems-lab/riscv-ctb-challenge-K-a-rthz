@@ -306,12 +306,16 @@ add x0,x0,x0
 .macro post_branch_macro
 add x0,x0,x0
  .endm
+
 .macro test_pass_macro
-la      sp, begin_signature; addi    sp, sp, 2*REGBYTES; li      t1, 0xfffff; SREG    t1, 0*REGBYTES(sp)
- .endm
+la      sp, begin_signature
+addi    sp, sp, 2*REGBYTES
+li      t1, 0xfffff
+SREG    t1, 0*REGBYTES(sp)
+.endm
+
 .macro test_fail_macro
-add x0,x0,x0
- .endm
+.endm
 
 # User defined functions to be called
     
@@ -321,42 +325,42 @@ add x0,x0,x0
   ret
 
 .macro ecause02_00000
-.word 0x68317C53
+.word 0x2752112B
 .endm
       
 .macro ecause02_00001
-.word 0x1B348AFB
+.word 0x2542CF67
 .endm
       
 .macro ecause02_00002
-.word 0x26D0583F
+.word 0x9EBB2DE7
 .endm
       
 .macro ecause02_00003
-.word 0x1D709E2B
+.word 0x3003A92F
 .endm
       
 .macro ecause02_00004
-.word 0x51F385A7
+.word 0x1BDF546B
 .endm
       
 .macro ecause02_00005
-.word 0xD2ADB163
+.word 0x24947FDB
 .endm
       
 .macro ecause02_00006
-.word 0xBFB1315B
+.word 0x2542CF67
 .endm
       
 .macro ecause02_00007
-.word 0x5B8C6EDF
+.word 0x2752112B
 .endm
       
 .macro ecause02_00008
-.word 0xD2ADB163
+.word 0x2752112B
 .endm
       
 .macro ecause02_00009
-.word 0xA84A1A5F
+.word 0x9EBB2DE7
 .endm
       

@@ -230,10 +230,3 @@ program-macro:
 #             If rate = 10, checksums will be added every 10 instructions
 # ---------------------------------------------------------------------------------
 
-self-checking:
-  rate: 100
-  test_pass_macro: "la      sp, begin_signature;
- addi    sp, sp, 2*REGBYTES;
- li      t1, 0xfffff;
- SREG    t1, 0*REGBYTES(sp)"
-  test_fail_macro: "add x0,x0,x0"
