@@ -18,7 +18,7 @@ disass: compile
 spike: compile
 	@echo '[UpTickPro] Spike Run ------'
 	spike --isa=rv32i test.elf 
-	spike -c --isa=rv32i +signature=test_spike_signature.log test.elf
+	spike -l --isa=rv32i +signature=test_spike_signature.log test.elf
 
 sim: spike
 	@echo '[UpTickPro] Simulation ------'

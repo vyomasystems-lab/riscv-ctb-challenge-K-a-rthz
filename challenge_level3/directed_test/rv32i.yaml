@@ -143,7 +143,7 @@ csr-sections:
 #       function_name: '{number_of_times:"function_body"}'
 # ---------------------------------------------------------------------------------
 user-functions:
-  func1: '{10:"add x0,x0,x0"}'
+  func1: '{0:"add x0,x0,x0"}'
 
 # ---------------------------------------------------------------------------------
 # Switching Privledge modes in AAPG
@@ -176,8 +176,8 @@ d-cache:
 # Exception generation
 # ---------------------------------------------------------------------------------
 exception-generation:
-  ecause00: 0
-  ecause01: 0
+  ecause00: 10
+  ecause01: 10
   ecause02: 10
   ecause03: 0
   ecause04: 0

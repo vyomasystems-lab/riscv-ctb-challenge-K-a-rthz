@@ -298,7 +298,15 @@ ecall
 add x0,x0,x0
  .endm
 .macro post_program_macro
-add x0,x0,x0
+li gp,1; 
+ sw gp, tohost, t5;
+ fence.i;
+ li t6,  0x20000; 
+ la t5, begin_signature; 
+ sw t5, 0(t6); 
+ la t5, end_signature 
+ sw t5, 8(t6); 
+ sw t5,  12(t6);
  .endm
 .macro pre_branch_macro
 add x0,x0,x0
@@ -319,44 +327,3 @@ add x0,x0,x0
 func1:
 add x0,x0,x0
   ret
-
-.macro ecause02_00000
-.word 0x68317C53
-.endm
-      
-.macro ecause02_00001
-.word 0x1B348AFB
-.endm
-      
-.macro ecause02_00002
-.word 0x26D0583F
-.endm
-      
-.macro ecause02_00003
-.word 0x1D709E2B
-.endm
-      
-.macro ecause02_00004
-.word 0x51F385A7
-.endm
-      
-.macro ecause02_00005
-.word 0xD2ADB163
-.endm
-      
-.macro ecause02_00006
-.word 0xBFB1315B
-.endm
-      
-.macro ecause02_00007
-.word 0x5B8C6EDF
-.endm
-      
-.macro ecause02_00008
-.word 0xD2ADB163
-.endm
-      
-.macro ecause02_00009
-.word 0xA84A1A5F
-.endm
-      
