@@ -325,38 +325,38 @@ add x0,x0,x0
   ret
 
 .macro ecause02_00000
-.word 0xE6A1E4A3
+.word 0x86684BBF
 .endm
       
 .macro ecause02_00001
-.word 0x4633E757
+.word 0xC2C25153
 .endm
       
 .macro ecause02_00002
-.word 0x3A6857F
+.word 0x6599768F
 .endm
       
 .macro ecause02_00003
-.word 0x3A6857F
+.word 0x563A9BF
 .endm
       
 .macro ecause02_00004
-.word 0xE6A1E4A3
+.word 0x86684BBF
 .endm
       
 .macro ecause02_00005
-.word 0xEB53EC2B
+.word 0xD2602BE3
 .endm
       
 .macro ecause02_00006
-.word 0xE6A1E4A3
+.word 0x6599768F
 .endm
       
 .macro ecause02_00007
-.word 0xB5E9215B
+.word 0xB9DD5113
 .endm
       
 .macro ecause02_00008
-.word 0x3AF3AE57
+.word 0x7C97E47B
 .endm
       

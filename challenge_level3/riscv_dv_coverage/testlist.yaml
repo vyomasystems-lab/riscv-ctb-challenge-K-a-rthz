@@ -96,3 +96,11 @@
     +num_of_sub_program=1
     +directed_instr_0=riscv_load_store_rand_instr_stream,8
   rtl_test: core_base_test
+
+- test: riscv_instr_cov_test
+  description: >
+    Parse the instruction information from the CSV trace log, sample functional
+    coverage from the instruction trace.
+  iterations: 1
+  gen_test: riscv_instr_cov_test
+  rtl_test: riscv_instr_cov_test
