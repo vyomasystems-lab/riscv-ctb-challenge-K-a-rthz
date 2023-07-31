@@ -1,0 +1,1 @@
+config file was generating instructions related RV64i architecture. Changed the configuration in the yaml file and generated the spike file.

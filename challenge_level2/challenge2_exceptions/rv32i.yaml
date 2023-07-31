@@ -178,7 +178,7 @@ d-cache:
 exception-generation:
   ecause00: 0
   ecause01: 0
-  ecause02: 10
+  ecause02: 9
   ecause03: 0
   ecause04: 0
   ecause05: 0
@@ -222,11 +222,5 @@ program-macro:
   ecause13: "random"
   ecause14: "random"
 
-# ---------------------------------------------------------------------------------
-# Self Checking 
-# If self_checking flag is enabled during the gen command, the below section is used
-# Options:              
-#       rate: The interval at which checksums are added to the test. 
-#             If rate = 10, checksums will be added every 10 instructions
-# ---------------------------------------------------------------------------------
+
 

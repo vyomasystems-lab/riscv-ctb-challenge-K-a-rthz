@@ -1,0 +1,1 @@
+Found couple of instruction errors. Solved it and generated test_spike.dump file.

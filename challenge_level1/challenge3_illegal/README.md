@@ -1,0 +1,2 @@
+Loop was running indefinetly as there is any mtvec variable. Used priveleged spec to undestand the handling of CSRs.
+Created a mtvec variable and made the program counter return to handler to execute the instructions and after handling exceptions.
